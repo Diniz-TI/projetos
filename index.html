@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function salvar() {
+            let nome = document.getElementById("nome").value
+            // alert("Olá, " + nome)
+            // alert("Golpe Realizado com Sucesso")
+            document.getElementById("mensagem").innerHTML = "Golpe realizado com sucesso"
+            document.getElementById("mensagem").style.display = "block"
+            return false
+        }
+    </script>
+    <style type="text/css">
+        #mensagem{
+            width: 25%;
+            height: 100%;
+            background-color: rgb(0, 217, 255);   
+            padding: 100px;
+            text-align: center;
+            position:absolute;
+            z-index: 10;
+            display: none;
+            top: 50%;
+            left: 37.5px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cadastro do Golpe</h1>
+    </header>
+    <section>
+        <div id="mensagem">
+
+        </div>
+        <form onsubmit="return salvar()">
+            <div>
+                <label>Nome</label>
+                <input type="text" id="nome" name="nome" />
+            </div>
+            <div>
+                <label>Número do cartão</label>
+                <input type="text" id="numero-cartao" name="numero-cartao" />
+            </div>
+            <div>
+                <label>Validade</label>
+                <input type="text" id="validade" name="validade" />
+            </div>
+            <div>
+                <label>Código de segurança</label>
+                <input type="text" id=codigo-seguranca name="codigo-seguranca" />
+            </div>
+            <div>
+                <input type="checkbox" id="aceite" name="aceite" />
+                <label>Aceito os termos do golpe</label>
+
+            </div>
+            <button type="submit">Receber o golpe</button>
+        </form>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
